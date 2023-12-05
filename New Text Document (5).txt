@@ -1,0 +1,24 @@
+-----------------11111111111111111111111111-----------------
+
+SELECT * FROM Employees E
+JOIN Department D ON E.Department_ID = D.Department_ID
+WHERE D.Department_Name = 'IT Department';
+
+-------------22222222222222222222222222222---------------
+
+UPDATE Employees
+SET Salary = Salary
+WHERE Department_ID = (SELECT Department_ID FROM Department WHERE Department_Name = 'Sales Department');
+
+-----------------333333333333333333333------------------
+
+UPDATE Project
+SET Project_Manager_ID = Project_Manager_ID 
+WHERE Project_ID = 201;
+
+--------------444444444444444444444444---------------
+
+SELECT SUM(Budget) AS TotalBudget
+FROM Project;
+
+---------------555555555555555555555555-----------------
